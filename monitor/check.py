@@ -84,12 +84,23 @@ def check_line(line: dict, settings: dict) -> dict:
     method = "icmp"
     up = icmp_ping(ip, timeout)
 
-    if not up:
-        for port in fallback_ports:
-            if tcp_check(ip, port, timeout):
-                up = True
-                method = f"tcp/{port}"
-                break
+    if not up and fallback_ports:
+        # Probe all fallback ports in parallel; first hit wins.
+        # 1 IP × 8 ports sequential would be ~24s — parallel keeps it ~3s.
+        with ThreadPoolExecutor(max_workers=len(fallback_ports)) as pex:
+            futures = {pex.submit(tcp_check, ip, p, timeout): p for p in fallback_ports}
+            for fut in as_completed(futures):
+                port = futures[fut]
+                try:
+                    if fut.result():
+                        up = True
+                        method = f"tcp/{port}"
+                        # Cancel any still-pending probes
+                        for f in futures:
+                            f.cancel()
+                        break
+                except Exception:
+                    pass
 
     latency_ms = int((time.monotonic() - t0) * 1000)
 

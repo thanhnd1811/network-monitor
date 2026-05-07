@@ -2,7 +2,8 @@
   "school": "Đại học Ngoại thương",
   "settings": {
     "ping_timeout_seconds": 3,
-    "tcp_fallback_ports": [80, 443, 53]
+    "_comment_ports": "Ports to try if ICMP is blocked. 7547 (TR-069) is what ISPs use to manage modems → very often open on customer-edge IPs. 80/443 = router web UI, 22/8080/8443 = mgmt interfaces, 53 = DNS, 23 = telnet.",
+    "tcp_fallback_ports": [7547, 443, 80, 53, 8080, 8443, 22, 23]
   },
   "locations": [
     {
