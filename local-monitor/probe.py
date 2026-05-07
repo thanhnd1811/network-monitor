@@ -303,7 +303,9 @@ def main() -> int:
         sha = github_get_file_sha(token, owner, repo, path)
         github_put_file(
             token, owner, repo, path, content_bytes,
-            message=f"chore(local-probe): update status ({up}/{total} up) [skip ci]",
+            # NOTE: do NOT add "[skip ci]" — that would block GitHub Pages
+            # from redeploying when status.json changes.
+            message=f"chore(local-probe): update status ({up}/{total} up)",
             sha=sha,
         )
         log(f"Pushed to {owner}/{repo}:{path}  ({up}/{total} UP)")
