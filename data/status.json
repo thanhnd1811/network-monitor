@@ -1,0 +1,7 @@
+{
+  "school": "Đại học Ngoại thương",
+  "generated_at": null,
+  "summary": { "total": 0, "up": 0, "down": 0 },
+  "locations": [],
+  "_note": "Placeholder. The monitor workflow will overwrite this on its first run on GitHub Actions."
+}

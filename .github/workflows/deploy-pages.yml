@@ -1,0 +1,60 @@
+name: Deploy web dashboard to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "data/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch: {}
+
+# One deploy at a time
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble site (web/ + data/)
+        run: |
+          mkdir -p _site
+          cp -r web/* _site/
+          mkdir -p _site/data
+          # Copy live status if it exists; if not (first deploy), drop a placeholder
+          if [ -f data/status.json ]; then
+            cp data/status.json _site/data/
+          else
+            echo '{"school":"Đại học Ngoại thương","generated_at":null,"summary":{"total":0,"up":0,"down":0},"locations":[]}' > _site/data/status.json
+          fi
+          if [ -f data/history.json ]; then
+            cp data/history.json _site/data/
+          else
+            echo '{"events":[]}' > _site/data/history.json
+          fi
+          ls -la _site/ _site/data/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

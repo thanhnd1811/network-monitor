@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Giám sát mạng FTU</string>
+    <string name="error_title">Không tải được dashboard</string>
+    <string name="error_body">Kiểm tra kết nối mạng rồi thử lại.</string>
+    <string name="retry">Thử lại</string>
+</resources>

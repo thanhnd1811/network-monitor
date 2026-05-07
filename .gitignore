@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Android build outputs (we generate APK in CI, never local)
+android-src/.gradle/
+android-src/build/
+android-src/app/build/
+android-src/local.properties
+android-src/app/url.properties
+
+# Local web data copy (only real data/ is committed by the monitor workflow)
+web/data/
+
+# Local working files
+*.tmp
+out/

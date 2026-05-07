@@ -1,0 +1,85 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "android-src/**"
+      - ".github/workflows/build-apk.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: |
+            platforms;android-34
+            build-tools;34.0.0
+            platform-tools
+
+      - name: Inject dashboard URL from GitHub Pages
+        working-directory: android-src/app
+        run: |
+          REPO_OWNER=$(echo "${GITHUB_REPOSITORY%%/*}" | tr '[:upper:]' '[:lower:]')
+          REPO_NAME=$(echo "${GITHUB_REPOSITORY##*/}")
+          URL="https://${REPO_OWNER}.github.io/${REPO_NAME}/"
+          echo "DASHBOARD_URL=${URL}" > url.properties
+          echo "Built with DASHBOARD_URL=$URL"
+          cat url.properties
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: "8.10.2"
+
+      - name: Build debug APK
+        working-directory: android-src
+        run: gradle :app:assembleDebug --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: |
+          mkdir -p out
+          cp android-src/app/build/outputs/apk/debug/app-debug.apk \
+             "out/giam-sat-mang-ftu-v$(date +%Y%m%d-%H%M).apk"
+          cp android-src/app/build/outputs/apk/debug/app-debug.apk \
+             "out/giam-sat-mang-ftu-latest.apk"
+          ls -lh out/
+
+      - name: Upload APK as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: giam-sat-mang-ftu-apk
+          path: out/*.apk
+
+      - name: Publish to Releases (latest)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Bản APK mới nhất"
+          body: |
+            Tải file `.apk` ở phần Assets bên dưới rồi cài lên điện thoại Android.
+
+            **Hướng dẫn cài**: mở file APK trên điện thoại → cho phép "Cài đặt từ nguồn không xác định" nếu được hỏi → cài → mở app.
+          files: out/*.apk
+          prerelease: false
+          draft: false
