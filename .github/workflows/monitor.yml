@@ -1,14 +1,14 @@
 name: Monitor network lines
 
+# Disabled cron: the local probe (running on a school PC inside Vietnam) is the
+# primary data source — its accuracy is much higher than pinging from GitHub
+# runners abroad. This workflow is kept available for manual fallback only.
 on:
-  schedule:
-    # Every 5 minutes (GitHub minimum). May drift a bit on free runners.
-    - cron: "*/5 * * * *"
-  workflow_dispatch: {}      # Allow manual trigger from Actions tab
+  workflow_dispatch: {}      # Manual trigger only
   push:
     branches: [main]
     paths:
-      - "monitor/**"
+      - "monitor/check.py"   # Re-test if script itself changes
 
 # Only one monitor run at a time, queue the rest, never parallel
 concurrency:

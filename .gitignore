@@ -25,3 +25,17 @@ web/data/
 # Local working files
 *.tmp
 out/
+
+# Local-monitor build artifacts
+local-monitor/build/
+local-monitor/dist/
+local-monitor/*.spec
+local-monitor/config.json
+local-monitor/probe.log
+
+# Don't commit binary EXE in source repo (it's distributed via Releases instead)
+local-monitor/ftu-netmon-probe.exe
+local-monitor/*.zip
+
+# Bundled deployment ZIP (built locally, distribute via copy or Releases)
+ftu-netmon-local.zip

@@ -1,0 +1,231 @@
+{
+  "__how_to_use__": "Sửa 3 dòng github_token / github_owner / github_repo bên dưới. Phần locations giữ nguyên (đồng bộ với monitor/ips.json).",
+  "github_token": "PASTE-PERSONAL-ACCESS-TOKEN-HERE",
+  "github_owner": "thanhnd1811",
+  "github_repo": "network-monitor",
+  "github_path": "data/status.json",
+  "school": "Đại học Ngoại thương",
+  "settings": {
+    "ping_timeout_seconds": 3,
+    "tcp_fallback_ports": [
+      7547,
+      443,
+      80,
+      53,
+      8080,
+      8443,
+      22,
+      23
+    ]
+  },
+  "locations": [
+    {
+      "id": "hanoi",
+      "name": "Cơ sở Hà Nội",
+      "lines": [
+        {
+          "id": "hn-netnam-leaseline",
+          "name": "NetNam Leaseline",
+          "isp": "NetNam",
+          "type": "Leaseline",
+          "ip": "210.86.226.160",
+          "ip_range": "210.86.226.160 - 210.86.226.173"
+        },
+        {
+          "id": "hn-netnam-ftth",
+          "name": "NetNam FTTH",
+          "isp": "NetNam",
+          "type": "FTTH",
+          "ip": "119.15.169.82",
+          "ip_range": "119.15.169.82 - 119.15.169.85"
+        },
+        {
+          "id": "hn-viettel-1",
+          "name": "Viettel 1",
+          "isp": "Viettel",
+          "type": "WAN",
+          "ip": "117.6.161.102"
+        },
+        {
+          "id": "hn-viettel-2",
+          "name": "Viettel 2",
+          "isp": "Viettel",
+          "type": "WAN",
+          "ip": "117.6.172.148",
+          "ip_range": "117.6.172.148 - 117.6.172.151"
+        },
+        {
+          "id": "hn-viettel-3",
+          "name": "Viettel 3",
+          "isp": "Viettel",
+          "type": "WAN",
+          "ip": "117.6.96.2"
+        },
+        {
+          "id": "hn-viettel-4",
+          "name": "Viettel 4",
+          "isp": "Viettel",
+          "type": "WAN",
+          "ip": "117.6.161.105"
+        },
+        {
+          "id": "hn-fpt-1",
+          "name": "FPT 1",
+          "isp": "FPT",
+          "type": "WAN",
+          "ip": "118.70.164.220"
+        },
+        {
+          "id": "hn-fpt-2",
+          "name": "FPT 2",
+          "isp": "FPT",
+          "type": "WAN",
+          "ip": "210.245.52.179"
+        },
+        {
+          "id": "hn-vnpt-lan73-1",
+          "name": "VNPT LAN 73 (1)",
+          "isp": "VNPT",
+          "type": "LAN",
+          "ip": "222.252.20.226"
+        },
+        {
+          "id": "hn-vnpt-lan73-2",
+          "name": "VNPT LAN 73 (2)",
+          "isp": "VNPT",
+          "type": "LAN",
+          "ip": "103.238.70.207"
+        },
+        {
+          "id": "hn-vnpt-wifi-1",
+          "name": "VNPT WiFi 1",
+          "isp": "VNPT",
+          "type": "WiFi",
+          "ip": "222.252.99.159"
+        },
+        {
+          "id": "hn-vnpt-wifi-2",
+          "name": "VNPT WiFi 2 (mới 4/2026)",
+          "isp": "VNPT",
+          "type": "WiFi",
+          "ip": "14.238.149.250"
+        },
+        {
+          "id": "hn-netnam-wifi-1",
+          "name": "NetNam WiFi 1",
+          "isp": "NetNam",
+          "type": "WiFi",
+          "ip": "101.96.78.180"
+        },
+        {
+          "id": "hn-netnam-wifi-2",
+          "name": "NetNam WiFi 2 (mới 4/2026)",
+          "isp": "NetNam",
+          "type": "WiFi",
+          "ip": "101.96.96.250"
+        },
+        {
+          "id": "hn-netnam-wifi-3",
+          "name": "NetNam WiFi 3 (mới 4/2026)",
+          "isp": "NetNam",
+          "type": "WiFi",
+          "ip": "101.96.96.254"
+        },
+        {
+          "id": "hn-fpt-lan82",
+          "name": "FPT LAN 82 (đang dùng 1/2026)",
+          "isp": "FPT",
+          "type": "LAN",
+          "ip": "42.113.215.107"
+        }
+      ]
+    },
+    {
+      "id": "hcm",
+      "name": "Cơ sở TP Hồ Chí Minh",
+      "lines": [
+        {
+          "id": "hcm-htc-1",
+          "name": "HTC (1)",
+          "isp": "HTC",
+          "type": "WAN",
+          "ip": "103.238.72.69"
+        },
+        {
+          "id": "hcm-vnpt",
+          "name": "VNPT",
+          "isp": "VNPT",
+          "type": "WAN",
+          "ip": "222.253.52.199"
+        },
+        {
+          "id": "hcm-netnam",
+          "name": "NetNam",
+          "isp": "NetNam",
+          "type": "WAN",
+          "ip": "119.17.240.32",
+          "ip_range": "119.17.240.32 - 119.17.240.38"
+        },
+        {
+          "id": "hcm-htc-2",
+          "name": "HTC (2)",
+          "isp": "HTC",
+          "type": "WAN",
+          "ip": "103.238.72.46"
+        },
+        {
+          "id": "hcm-htc-3",
+          "name": "HTC (3)",
+          "isp": "HTC",
+          "type": "WAN",
+          "ip": "103.130.211.116",
+          "ip_range": "103.130.211.116 - 103.130.211.118"
+        },
+        {
+          "id": "hcm-htc-4",
+          "name": "HTC (4)",
+          "isp": "HTC",
+          "type": "WAN",
+          "ip": "203.128.242.232",
+          "ip_range": "203.128.242.232/30"
+        },
+        {
+          "id": "hcm-htc-5",
+          "name": "HTC (5)",
+          "isp": "HTC",
+          "type": "WAN",
+          "ip": "103.238.72.49"
+        }
+      ]
+    },
+    {
+      "id": "quangninh",
+      "name": "Cơ sở Quảng Ninh",
+      "lines": [
+        {
+          "id": "qn-netnam-1",
+          "name": "NetNam (1)",
+          "isp": "NetNam",
+          "type": "WAN",
+          "ip": "113.160.120.104",
+          "ip_range": "113.160.120.104 - 113.160.120.111"
+        },
+        {
+          "id": "qn-netnam-2",
+          "name": "NetNam (2)",
+          "isp": "NetNam",
+          "type": "WAN",
+          "ip": "113.160.120.120",
+          "ip_range": "113.160.120.120 - 113.160.120.127"
+        },
+        {
+          "id": "qn-netnam-3",
+          "name": "NetNam (3)",
+          "isp": "NetNam",
+          "type": "WAN",
+          "ip": "113.176.13.231"
+        }
+      ]
+    }
+  ]
+}
