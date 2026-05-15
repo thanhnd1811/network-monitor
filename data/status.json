@@ -1,10 +1,10 @@
 {
   "school": "Đại học Ngoại thương",
-  "generated_at": "2026-05-15T03:23:53.896282+00:00",
+  "generated_at": "2026-05-15T03:24:53.793565+00:00",
   "summary": {
     "total": 26,
-    "up": 4,
-    "down": 22
+    "up": 3,
+    "down": 23
   },
   "source": "local-probe",
   "probe_public_ip": "27.72.102.179",
@@ -12,7 +12,7 @@
     {
       "id": "hanoi",
       "name": "Cơ sở Hà Nội",
-      "down_count": 14,
+      "down_count": 15,
       "total_count": 16,
       "lines": [
         {
@@ -24,8 +24,8 @@
           "ip_range": "210.86.226.160 - 210.86.226.173",
           "up": false,
           "method": "none",
-          "latency_ms": 5937,
-          "checked_at": "2026-05-15T03:23:47.370275+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.374531+00:00"
         },
         {
           "id": "hn-netnam-ftth",
@@ -36,8 +36,8 @@
           "ip_range": "119.15.169.82 - 119.15.169.85",
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.373535+00:00"
         },
         {
           "id": "hn-viettel-1",
@@ -48,8 +48,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5937,
-          "checked_at": "2026-05-15T03:23:47.370275+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.367531+00:00"
         },
         {
           "id": "hn-viettel-2",
@@ -60,8 +60,8 @@
           "ip_range": "117.6.172.148 - 117.6.172.151",
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.377531+00:00"
         },
         {
           "id": "hn-viettel-3",
@@ -72,8 +72,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.370531+00:00"
         },
         {
           "id": "hn-viettel-4",
@@ -84,8 +84,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.378532+00:00"
         },
         {
           "id": "hn-fpt-1",
@@ -96,8 +96,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.376531+00:00"
         },
         {
           "id": "hn-fpt-2",
@@ -108,8 +108,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6016,
+          "checked_at": "2026-05-15T03:24:47.381530+00:00"
         },
         {
           "id": "hn-vnpt-lan73-1",
@@ -120,8 +120,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.375531+00:00"
         },
         {
           "id": "hn-vnpt-lan73-2",
@@ -132,8 +132,8 @@
           "ip_range": null,
           "up": true,
           "method": "icmp",
-          "latency_ms": 78,
-          "checked_at": "2026-05-15T03:23:41.511304+00:00"
+          "latency_ms": 47,
+          "checked_at": "2026-05-15T03:24:41.418681+00:00"
         },
         {
           "id": "hn-vnpt-wifi-1",
@@ -144,8 +144,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6016,
+          "checked_at": "2026-05-15T03:24:47.380536+00:00"
         },
         {
           "id": "hn-vnpt-wifi-2",
@@ -156,8 +156,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.370531+00:00"
         },
         {
           "id": "hn-netnam-wifi-1",
@@ -168,8 +168,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 5985,
+          "checked_at": "2026-05-15T03:24:47.360311+00:00"
         },
         {
           "id": "hn-netnam-wifi-2",
@@ -180,8 +180,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5953,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.366531+00:00"
         },
         {
           "id": "hn-netnam-wifi-3",
@@ -190,10 +190,10 @@
           "type": "WiFi",
           "ip": "101.96.96.254",
           "ip_range": null,
-          "up": true,
-          "method": "icmp",
-          "latency_ms": 969,
-          "checked_at": "2026-05-15T03:23:42.413567+00:00"
+          "up": false,
+          "method": "none",
+          "latency_ms": 6016,
+          "checked_at": "2026-05-15T03:24:47.379531+00:00"
         },
         {
           "id": "hn-fpt-lan82",
@@ -204,8 +204,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5922,
-          "checked_at": "2026-05-15T03:23:47.370275+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:47.369532+00:00"
         }
       ]
     },
@@ -224,8 +224,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5938,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 5983,
+          "checked_at": "2026-05-15T03:24:47.365531+00:00"
         },
         {
           "id": "hcm-vnpt",
@@ -236,8 +236,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5938,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 5983,
+          "checked_at": "2026-05-15T03:24:47.363530+00:00"
         },
         {
           "id": "hcm-netnam",
@@ -248,8 +248,8 @@
           "ip_range": "119.17.240.32 - 119.17.240.38",
           "up": false,
           "method": "none",
-          "latency_ms": 5938,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 5983,
+          "checked_at": "2026-05-15T03:24:47.371531+00:00"
         },
         {
           "id": "hcm-htc-2",
@@ -260,8 +260,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5938,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "latency_ms": 5983,
+          "checked_at": "2026-05-15T03:24:47.377531+00:00"
         },
         {
           "id": "hcm-htc-3",
@@ -270,10 +270,10 @@
           "type": "WAN",
           "ip": "103.130.211.116",
           "ip_range": "103.130.211.116 - 103.130.211.118",
-          "up": true,
-          "method": "tcp/7547",
-          "latency_ms": 3983,
-          "checked_at": "2026-05-15T03:23:45.495133+00:00"
+          "up": false,
+          "method": "none",
+          "latency_ms": 5952,
+          "checked_at": "2026-05-15T03:24:47.373535+00:00"
         },
         {
           "id": "hcm-htc-4",
@@ -282,10 +282,10 @@
           "type": "WAN",
           "ip": "203.128.242.232",
           "ip_range": "203.128.242.232/30",
-          "up": false,
-          "method": "none",
-          "latency_ms": 5952,
-          "checked_at": "2026-05-15T03:23:48.370939+00:00"
+          "up": true,
+          "method": "tcp/443",
+          "latency_ms": 6014,
+          "checked_at": "2026-05-15T03:24:53.365898+00:00"
         },
         {
           "id": "hcm-htc-5",
@@ -296,8 +296,8 @@
           "ip_range": null,
           "up": false,
           "method": "none",
-          "latency_ms": 5875,
-          "checked_at": "2026-05-15T03:23:51.371312+00:00"
+          "latency_ms": 6000,
+          "checked_at": "2026-05-15T03:24:53.366897+00:00"
         }
       ]
     },
@@ -317,7 +317,7 @@
           "up": false,
           "method": "none",
           "latency_ms": 6000,
-          "checked_at": "2026-05-15T03:23:53.370650+00:00"
+          "checked_at": "2026-05-15T03:24:53.366897+00:00"
         },
         {
           "id": "qn-netnam-2",
@@ -329,7 +329,7 @@
           "up": false,
           "method": "none",
           "latency_ms": 6000,
-          "checked_at": "2026-05-15T03:23:53.370650+00:00"
+          "checked_at": "2026-05-15T03:24:53.365898+00:00"
         },
         {
           "id": "qn-netnam-3",
@@ -341,7 +341,7 @@
           "up": true,
           "method": "icmp",
           "latency_ms": 16,
-          "checked_at": "2026-05-15T03:23:47.385671+00:00"
+          "checked_at": "2026-05-15T03:24:47.390531+00:00"
         }
       ]
     }
